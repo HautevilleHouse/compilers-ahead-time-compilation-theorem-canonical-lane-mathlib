@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import CompilersAheadTimeCompilationTheoremCanonicalLaneLean.IntermediateRepresentation
+import CompilersAheadTimeCompilationTheoremCanonicalLaneLean.CodeGeneration
+import CompilersAheadTimeCompilationTheoremCanonicalLaneLean.AheadTimeOptimization
+
+namespace HautevilleHouse
+namespace CompilersAheadTimeCompilationTheoremCanonicalLaneLean
+
+def CompilersAheadTimeCompilationTheoremClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem compilers_ahead_time_compilation_theorem_endgame (A : AdmissibleClass) :
+    CompilersAheadTimeCompilationTheoremClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end CompilersAheadTimeCompilationTheoremCanonicalLaneLean
+end HautevilleHouse
